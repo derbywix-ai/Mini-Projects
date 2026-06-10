@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person Profiles & BMI Calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.2rem;
+        }
+        
+        .profiles-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .profile-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .profile-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .profile-header {
+            padding: 20px;
+            text-align: center;
+            background: #3498db;
+            color: white;
+        }
+        
+        .profile-name {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+        
+        .profile-career {
+            font-style: italic;
+            opacity: 0.9;
+        }
+        
+        .profile-content {
+            padding: 20px;
+        }
+        
+        .profile-detail {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #f1f1f1;
+        }
+        
+        .detail-label {
+            font-weight: 600;
+            color: #7f8c8d;
+        }
+        
+        .bmi-section {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+        
+        .bmi-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin: 10px 0;
+        }
+        
+        .weight-category {
+            text-align: center;
+            padding: 8px;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        
+        .underweight {
+            background: #ffeaa7;
+            color: #d35400;
+        }
+        
+        .normal {
+            background: #abf7b1;
+            color: #27ae60;
+        }
+        
+        .overweight {
+            background: #ffd8a6;
+            color: #e67e22;
+        }
+        
+        .obese {
+            background: #ffb8b8;
+            color: #c0392b;
+        }
+        
+        .calculate-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: background 0.3s;
+        }
+        
+        .calculate-btn:hover {
+            background: #2980b9;
+        }
+        
+        @media (max-width: 768px) {
+            .profiles-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Person Profiles</h1>
+            <p class="subtitle">BMI Calculator and Personal Information</p>
+        </header>
+        
+        <div class="profiles-container">
+            <!-- Profiles will be inserted here by JavaScript -->
+        </div>
+    </div>
+     <script>
+        // Person objects
+        const dorisObj = {
+            name: 'Doris',
+            age: 25,
+            sex: 'female',
+            nationality: "Nigerian",
+            futureCareer: "Mobile Developer",
+            weight: 80,
+            height: 1.626,
+        }
+        // Introduction function
+        function introduction(personObject) {
+            return `My name is ${personObject.name}. I am a ${personObject.nationality} and I want to be a professional ${personObject.futureCareer}. I was born in the year ${2025 - personObject.age}.`;
+        }
+
+        // Calculate BMI and determine weight category
+        function calculateBMIAndDetermineWeightCategory(personObject) {
+            let BMI = personObject.weight / (personObject.height * personObject.height);
+            let category = '';
+            let categoryClass = '';
+            
+            if (BMI >= 30) {
+                category = 'Obese';
+                categoryClass = 'obese';
+            } else if (BMI >= 25) {
+                category = 'Overweight';
+                categoryClass = 'overweight';
+            } else if (BMI >= 18.5) {
+                category = 'Normal weight';
+                categoryClass = 'normal';
+            } else {
+                category = 'Underweight';
+                categoryClass = 'underweight';
+            }
+            
+            return {
+                value: BMI.toFixed(2),
+                category: category,
+                categoryClass: categoryClass
+            };
+        }
+
+        // Display all profiles
+        function displayProfiles() {
+            const profiles = [dorisObj];
+            const container = document.querySelector('.profiles-container');
+            
+            profiles.forEach(person => {
+                const intro = introduction(person);
+                const bmiResult = calculateBMIAndDetermineWeightCategory(person);
+                
+                const profileCard = document.createElement('div');
+                profileCard.className = 'profile-card';
+                
+                profileCard.innerHTML = `
+                    <div class="profile-header">
+                        <h2 class="profile-name">${person.name}</h2>
+                        <p class="profile-career">${person.futureCareer}</p>
+                    </div>
+                    <div class="profile-content">
+                        <div class="profile-detail">
+                            <span class="detail-label">Age:</span>
+                            <span>${person.age}</span>
+                        </div>
+                        <div class="profile-detail">
+                            <span class="detail-label">Sex:</span>
+                            <span>${person.sex}</span>
+                        </div>
+                        <div class="profile-detail">
+                            <span class="detail-label">Nationality:</span>
+                            <span>${person.nationality}</span>
+                        </div>
+                        <div class="profile-detail">
+                            <span class="detail-label">Weight:</span>
+                            <span>${person.weight} kg</span>
+                        </div>
+                        <div class="profile-detail">
+                            <span class="detail-label">Height:</span>
+                            <span>${person.height} m</span>
+                        </div>
+                        
+                        <div class="bmi-section">
+                            <h3>BMI Result</h3>
+                            <div class="bmi-value">${bmiResult.value}</div>
+                            <div class="weight-category ${bmiResult.categoryClass}">${bmiResult.category}</div>
+                        </div>
+                        
+                        <p style="margin-top: 20px; font-style: italic;">"${intro}"</p>
+                    </div>
+                `;
+                
+                container.appendChild(profileCard);
+            });
+        }
+
+        // Initialize the page
+        window.onload = displayProfiles;
+    </script>
+</body>
+</html>
