@@ -19,7 +19,7 @@
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
         }
         
@@ -44,7 +44,7 @@
         
         .profiles-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 25px;
         }
         
@@ -64,7 +64,6 @@
         .profile-header {
             padding: 20px;
             text-align: center;
-            background: #3498db;
             color: white;
         }
         
@@ -156,7 +155,7 @@
             background: #2980b9;
         }
         
-        @media (max-width: 768px) {
+        @media (max-width: 600px) {
             .profiles-container {
                 grid-template-columns: 1fr;
             }
@@ -176,7 +175,7 @@
     </div>
      <script>
         // Person objects
-        const dorisObj = {
+        const profiles =[ {
             name: 'Doris',
             age: 25,
             sex: 'female',
@@ -184,11 +183,94 @@
             futureCareer: "Mobile Developer",
             weight: 80,
             height: 1.626,
-        }
+            color: '#3498db'
+        },
+        {
+            name: 'John',
+            age: 28,
+            sex: 'male',
+            nationality: "Nigerian",
+            futureCareer: "Doctor",
+            weight: 70,
+            height: 1.9,
+            color:'#ff6780'
+        
+        },
+    {
+            name: 'Sarah',
+            age: 23,
+            sex: 'female',
+            nationality: "Kenyan",
+            futureCareer: "Vet",
+            weight: 60,
+            height: 1.686,
+            color:'#db5567'
+        },
+    {
+            name: 'Chris',
+            age: 27,
+            sex: 'male',
+            nationality: "Ghanaian",
+            futureCareer: "Architect",
+            weight: 75,
+            height: 1.75,
+            color:'#2ecc56'
+        },
+    {
+            name: 'Peter',
+            age: 25,
+            sex: 'male',
+            nationality: "Ghanaian",
+            futureCareer: "Engineer",
+            weight: 90,
+            height: 1.88,
+            color:'#7e44bd'
+        },
+    {
+            name: 'Linda',
+            age: 20,
+            sex: 'female',
+            nationality: "Ugandan",
+            futureCareer: "Designer",
+            weight: 58,
+            height: 1.65,
+            color:'#444edd'
+        },
+    {
+            name: 'Doris',
+            age: 30,
+            sex: 'male',
+            nationality: "Rwandan",
+            futureCareer: "Pilot",
+            weight: 76,
+            height: 1.777,
+            color:'#2ecc56'
+        },
+    {
+            name: 'Sarah',
+            age: 24,
+            sex: 'female',
+            nationality: "South African",
+            futureCareer: "Teacher",
+            weight: 65,
+            height: 1.70,
+            color:'#c0349b'
+        },
+    {
+            name: 'Grace',
+            age: 21,
+            sex: 'female',
+            nationality: "Cameroonian",
+            futureCareer: "Lawyer",
+            weight: 48,
+            height: 1.55,
+            color:'#d354ff'
+        }];
         // Introduction function
         function introduction(personObject) {
-            return `My name is ${personObject.name}. I am a ${personObject.nationality} and I want to be a professional ${personObject.futureCareer}. I was born in the year ${2025 - personObject.age}.`;
+            return `My name is ${personObject.name}. I am a ${personObject.nationality} and I want to be a professional ${personObject.futureCareer}. I was born in the year ${2026 - personObject.age}.`;
         }
+
 
         // Calculate BMI and determine weight category
         function calculateBMIAndDetermineWeightCategory(personObject) {
@@ -219,7 +301,6 @@
 
         // Display all profiles
         function displayProfiles() {
-            const profiles = [dorisObj];
             const container = document.querySelector('.profiles-container');
             
             profiles.forEach(person => {
@@ -230,7 +311,7 @@
                 profileCard.className = 'profile-card';
                 
                 profileCard.innerHTML = `
-                    <div class="profile-header">
+                    <div class="profile-header" style="background:${person.color}">
                         <h2 class="profile-name">${person.name}</h2>
                         <p class="profile-career">${person.futureCareer}</p>
                     </div>

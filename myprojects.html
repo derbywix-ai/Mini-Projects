@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>My Projects - Erdoo Deborah</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Inter:wght@400;500&family=Hanken+Grotesk:wght@600;700&display=swap" rel="stylesheet"/>
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+
+            theme: {
+                extend: {
+                    colors: {
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e4e2e1",
+                        "on-background": "#1b1c1c",
+                        "secondary-fixed": "#e9ddff",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#e6deff",
+                        "tertiary-fixed": "#e5e0ef",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed-dim": "#c9c4d3",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f3f0f0",
+                        "primary-container": "#7657fa",
+                        "surface-container-low": "#f6f3f2",
+                        "on-tertiary-fixed": "#1c1a25",
+                        "secondary": "#665495",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#5f3de3",
+                        "on-secondary-fixed-variant": "#4e3c7b",
+                        "tertiary-container": "#767380",
+                        "surface-variant": "#e4e2e1",
+                        "surface-container-high": "#eae8e7",
+                        "background": "#fbf9f8",
+                        "on-primary-fixed": "#1b0062",
+                        "on-surface-variant": "#484555",
+                        "secondary-container": "#cbb6ff",
+                        "primary": "#5c39e0",
+                        "primary-fixed-dim": "#c9beff",
+                        "secondary-fixed-dim": "#d0bcff",
+                        "surface": "#fbf9f8",
+                        "on-primary-fixed-variant": "#4617cb",
+                        "outline": "#797587",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#fffbff",
+                        "outline-variant": "#c9c4d8",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#5d5a67",
+                        "surface-container": "#f0eded",
+                        "on-tertiary-fixed-variant": "#474551",
+                        "on-secondary-fixed": "#210c4d",
+                        "on-surface": "#1b1c1c",
+                        "surface-bright": "#fbf9f8",
+                        "inverse-primary": "#c9beff",
+                        "inverse-surface": "#303030",
+                        "on-secondary-container": "#564484",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-dim": "#dcd9d9"
+                    },
+
+                    borderRadius: {
+                        DEFAULT: "1rem",
+                        lg: "2rem",
+                        xl: "3rem",
+                        full: "9999px"
+                    },
+
+                    spacing: {
+                        base: "8px",
+                        "section-gap": "120px",
+                        "container-padding": "24px",
+                        "card-padding": "32px",
+                        gutter: "24px"
+                    },
+
+                    fontFamily: {
+                        "label-md": ["Geist"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        display: ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        code: ["Geist"],
+                        "headline-lg": ["Hanken Grotesk"]
+                    },
+
+                    fontSize: {
+                        "label-md": [
+                            "14px",
+                            {
+                                lineHeight: "20px",
+                                letterSpacing: "0.02em",
+                                fontWeight: "500"
+                            }
+                        ],
+
+                        "body-md": [
+                            "16px",
+                            {
+                                lineHeight: "24px",
+                                fontWeight: "400"
+                            }
+                        ],
+
+                        "body-lg": [
+                            "18px",
+                            {
+                                lineHeight: "28px",
+                                fontWeight: "400"
+                            }
+                        ],
+
+                        display: [
+                            "64px",
+                            {
+                                lineHeight: "72px",
+                                letterSpacing: "-0.02em",
+                                fontWeight: "700"
+                            }
+                        ],
+
+                        "headline-md": [
+                            "24px",
+                            {
+                                lineHeight: "32px",
+                                fontWeight: "600"
+                            }
+                        ],
+
+                        "headline-lg-mobile": [
+                            "32px",
+                            {
+                                lineHeight: "40px",
+                                fontWeight: "600"
+                            }
+                        ],
+
+                        code: [
+                            "14px",
+                            {
+                                lineHeight: "20px",
+                                fontWeight: "400"
+                            }
+                        ],
+
+                        "headline-lg": [
+                            "40px",
+                            {
+                                lineHeight: "48px",
+                                letterSpacing: "-0.01em",
+                                fontWeight: "600"
+                            }
+                        ]
+                    }
+                }
+            }
+        };
+    </script>
+
+    <style>
+        body {
+            background-color: #fbf9f8;
+            color: #1b1c1c;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+
+<body class="antialiased min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container">
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav class="w-full h-20 bg-background border-b border-dashed border-secondary-container sticky top-0 z-50">
+
+    <div class="flex justify-between items-center max-w-[1200px] mx-auto px-container-padding h-full">
+
+        
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex space-x-8">
+
+            <a
+    class="font-headline-md text-headline-md text-on-background font-bold tracking-tight hover:text-primary transition-colors"
+    href="portfolio.html"
+>
+    Home
+</a>
+
+            <a
+                class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1"
+                href="myprojects.html"
+            >
+                Projects
+            </a>
+
+
+            <a
+                class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors"
+                href="contacts.html"
+            >
+                Contact
+            </a>
+
+        </div>
+
+
+        <!-- Mobile Menu Button -->
+        <button
+            class="md:hidden text-on-background hover:text-primary transition-colors"
+            aria-label="Open menu"
+        >
+            <span
+                class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 0;"
+            >
+                menu
+            </span>
+        </button>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================
+     MAIN CONTENT
+========================= -->
+
+<main class="flex-grow w-full max-w-[1200px] mx-auto px-container-padding py-12 md:py-24">
+
+
+    <!-- Header -->
+
+    <header class="text-left md:text-center max-w-3xl mx-auto space-y-4 mb-20">
+
+        <h1 class="font-display text-display text-on-background tracking-tighter">
+            My Projects
+        </h1>
+
+        <p class="font-body-lg text-body-lg text-on-surface-variant">
+            A collection of things I've built and projects I'm currently working on.
+        </p>
+
+    </header>
+
+
+
+    <!-- =========================
+         FEATURED PROJECT
+    ========================= -->
+
+    <section class="w-full mb-24">
+
+        <div
+            class="group relative bg-surface-container-lowest rounded-3xl border border-dashed border-secondary-container hover:border-solid hover:shadow-[0_20px_40px_rgba(122,92,255,0.08)] transition-all duration-300 overflow-hidden flex flex-col lg:flex-row"
+        >
+
+
+            <!-- Image -->
+
+            <div class="w-full lg:w-3/5 bg-secondary-fixed/30 p-card-padding flex items-center justify-center min-h-[400px]">
+
+                <div class="relative w-full h-[350px] lg:h-[450px] rounded-2xl overflow-hidden border border-dashed border-secondary-container shadow-sm">
+
+                    <!-- Replace this with your actual MedTrack screenshot -->
+                    <img
+                        alt="MedTrack Project Preview"
+                        class="absolute inset-0 w-full h-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcdSvn0eqQu8wsg8nhqrG3VUyaJmFku2TirB1bdxLd2hMamxA6jHf_RATWHrbavWyKAsQs9serIGt4rkKoLiVKTkp0OZXFJqtcJ6NNPNMfJeNP_6QwX0OSLcSzpzlo7wG-CkCT_qGlu2psff4uIkyWXHHKrFV3JHiFvd1aagkF-y9GNWNT3HZj1YiiBxqnoeyvuHmMDC7wSgc2VyOhb4DqjMllbMQaY1XzebbBsIJ91vicIp7uE47LCQ"
+                    />
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Content -->
+
+            <div class="w-full lg:w-2/5 p-card-padding lg:p-12 flex flex-col justify-center space-y-6">
+
+                <div class="space-y-4">
+
+                    <!-- Status -->
+
+                    <div class="inline-flex items-center space-x-2 bg-surface-container-low px-3 py-1 rounded-full border border-dashed border-secondary-container">
+
+                        <span
+                            class="material-symbols-outlined text-primary text-sm"
+                            style="font-variation-settings: 'FILL' 1;"
+                        >
+                            star
+                        </span>
+
+                        <span class="font-label-md text-label-md text-secondary">
+                            Featured Project
+                        </span>
+
+                    </div>
+
+
+                    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background">
+                        MedTrack
+                    </h2>
+
+
+                    <p class="font-body-md text-body-md text-on-surface-variant">
+                        A medication reminder app built with React Native.
+                        Users can add medications, set reminders, and track
+                        their medicines through an intuitive mobile interface.
+                    </p>
+
+                </div>
+
+
+                <!-- Technologies -->
+
+                <div class="flex flex-wrap gap-2">
+
+                    <span class="bg-[#f5f0ff] text-primary font-label-md text-label-md px-3 py-1 rounded-full border border-primary/20">
+                        React Native
+                    </span>
+
+                    <span class="bg-[#f5f0ff] text-primary font-label-md text-label-md px-3 py-1 rounded-full border border-primary/20">
+                        Expo
+                    </span>
+
+                    <span class="bg-[#f5f0ff] text-primary font-label-md text-label-md px-3 py-1 rounded-full border border-primary/20">
+                        Appwrite
+                    </span>
+
+                    <span class="bg-[#f5f0ff] text-primary font-label-md text-label-md px-3 py-1 rounded-full border border-primary/20">
+                        AsyncStorage
+                    </span>
+
+                </div>
+
+
+                <!-- Status -->
+
+                <div class="flex items-center gap-2 pt-2">
+
+                    <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+
+                    <span class="font-label-md text-label-md text-on-surface-variant">
+                        Currently in development
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         DIVIDER
+    ========================= -->
+
+    <div class="w-full h-px border-t border-dashed border-secondary-container mb-24"></div>
+
+
+
+    <!-- =========================
+         OTHER PROJECTS
+    ========================= -->
+
+    <section>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+
+
+            <!-- =========================
+                 NAIJA EXPLORER
+            ========================= -->
+
+            <div
+                class="group bg-surface-container-lowest rounded-3xl border border-dashed border-secondary-container p-4 hover:border-solid hover:shadow-[0_20px_40px_rgba(122,92,255,0.08)] transition-all duration-300 flex flex-col h-full"
+            >
+
+                <!-- Image -->
+
+                <div class="aspect-[1.34] w-full rounded-2xl overflow-hidden bg-secondary-fixed/20 mb-6 border border-dashed border-secondary-container/50">
+
+                    <!-- Replace with your actual screenshot -->
+                    <img
+                        alt="Naija Explorer Project"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJohXP5l5WRW_37jP-XomireoxYKm7sE-gA7abqKxE8go5Ovtm7nCVoH3mhAGCyzZoyuqYDdB5SM8xgAX-Z_C6J9hB0On99VnGDGZ-bP0xnbNoyU2tQU_CfAzfCoG_oH2jybLF0OKO7O9L0lhbqIdsa4BOs3f5nJb5CrBTk6j0CSvVwP3MRPRE2VT_zWXAImQ3a44rZ1CU5Yo98ZXMz_cJiUlJA_Ge0ULWG2vhV2fsWkOueyWW3fPEZw"
+                    />
+
+                </div>
+
+
+                <!-- Content -->
+
+                <div class="flex-grow flex flex-col space-y-4 px-2">
+
+                    <div class="flex items-center justify-between gap-3">
+
+                        <h3 class="font-headline-md text-headline-md text-on-background">
+                            Naija Explorer
+                        </h3>
+
+                        <span class="text-xs font-medium px-3 py-1 rounded-full bg-amber-50 text-amber-700">
+                            In Development
+                        </span>
+
+                    </div>
+
+
+                    <p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                        A travel application highlighting Nigerian landmarks,
+                        destinations, and places worth exploring through an
+                        immersive mobile experience.
+                    </p>
+
+
+                    <!-- Technologies -->
+
+                    <div class="flex flex-wrap gap-2 pt-2">
+
+                        <span class="bg-[#f5f0ff] text-primary font-label-md text-[12px] px-2.5 py-1 rounded-full">
+                            React Native
+                        </span>
+
+                        <span class="bg-[#f5f0ff] text-primary font-label-md text-[12px] px-2.5 py-1 rounded-full">
+                            Expo
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 HABITUAL
+            ========================= -->
+
+            <div
+                class="group bg-surface-container-lowest rounded-3xl border border-dashed border-secondary-container p-4 hover:border-solid hover:shadow-[0_20px_40px_rgba(122,92,255,0.08)] transition-all duration-300 flex flex-col h-full"
+            >
+
+                <!-- Image -->
+
+                <div class="aspect-[1.34] w-full rounded-2xl overflow-hidden bg-secondary-fixed/20 mb-6 border border-dashed border-secondary-container/50">
+
+                    <!-- Replace with your actual screenshot -->
+                    <img
+                        alt="Habitual Project"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk05XMzPqg7ZAmVhjLMlHy300Ux0dCpdnDJ2BWu8qZ6A712Xsh3hgm884-CWeEKrFvMXiUuHlmKnsXmlpXfnFZuIk0MbV6iNOUVtW3hTf3LcfzaNuw9gZ35Y89DIiYTVXaAiBf77UOTFP_QVXkvHrsyevcRqijQspgMd4NvyK4Z_ZgV3ly6R_Cl2sm9GTR8BsInETJgVySlK5JKezWSqXbts29RWMsHmlxpnCHwx1oJhEytEisl1g1tw"
+                    />
+
+                </div>
+
+
+                <!-- Content -->
+
+                <div class="flex-grow flex flex-col space-y-4 px-2">
+
+                    <div class="flex items-center justify-between gap-3">
+
+                        <h3 class="font-headline-md text-headline-md text-on-background">
+                            Habitual
+                        </h3>
+
+                        <span class="text-xs font-medium px-3 py-1 rounded-full bg-purple-50 text-primary">
+                            In Progress
+                        </span>
+
+                    </div>
+
+
+                    <p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                        A reminder and habit-management web application
+                        designed to make everyday routines easier and more
+                        engaging through personalized virtual companions.
+                    </p>
+
+
+                    <!-- Technologies -->
+
+                    <div class="flex flex-wrap gap-2 pt-2">
+
+                        <span class="bg-[#f5f0ff] text-primary font-label-md text-[12px] px-2.5 py-1 rounded-full">
+                            HTML
+                        </span>
+
+                        <span class="bg-[#f5f0ff] text-primary font-label-md text-[12px] px-2.5 py-1 rounded-full">
+                            CSS
+                        </span>
+
+                        <span class="bg-[#f5f0ff] text-primary font-label-md text-[12px] px-2.5 py-1 rounded-full">
+                            JavaScript
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="w-full py-20 bg-surface-container-low border-t border-dashed border-secondary-container">
+
+    <div class="flex flex-col items-center justify-center space-y-4 w-full px-container-padding text-center max-w-[1200px] mx-auto">
+
+        <h2 class="font-headline-md text-headline-md text-primary">
+            Erdoo Deborah
+        </h2>
+
+
+        <!-- Social Links -->
+
+        <div class="flex space-x-6 py-4">
+
+            <a
+                class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors"
+                href="https://www.linkedin.com/in/erdoo-agelaga-90700034b/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                LinkedIn
+            </a>
+
+            <a
+                class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors"
+                href="mailto:your-email@gmail.com"
+            >
+                Mail
+            </a>
+
+        </div>
+
+
+        <p class="font-body-md text-body-md text-secondary">
+            More projects coming soon. © 2026 Erdoo Deborah
+        </p>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>

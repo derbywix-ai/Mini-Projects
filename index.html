@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habitual</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <header class="top-bar">
+            <h1>Habitual</h1>
+            <button class="profile-button">👤</button>
+        </header>
+
+        <main>
+            <section class="content">
+                <h2>Welcome to Habitual</h2>
+                <p>Your reminders, but with personality.</p>
+            </section>
+
+            <section class="reminders-section">
+                <div class="section-header">
+                    <div>
+                        <span class="section-label">YOUR DAY</span>
+                        <h2>Today's Reminders</h2>
+                    </div>
+                    <button class="add-reminder-button">+ Add Reminder</button>
+                </div>
+                <div class="reminders-list" id="remindersList"></div>
+            </section>
+
+            <section class="progress-section">
+                <div class="progress-header">
+                    <div>
+                        <span class="section-label">YOUR PROGRESS</span>
+                        <h2>Today's Progress</h2>
+                    </div>
+                    <span class="progress-percentage" id="progressPercentage">0%</span>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+
+                <div class="progress-details">
+                    <div class="progress-stat">
+                        <span class="stat-icon">✓</span>
+                        <div>
+                            <strong id="progressCount">0 of 0</strong>
+                            <span>tasks completed</span>
+                        </div>
+                    </div>
+
+                    <div class="progress-stat">
+                        <span class="stat-icon">🔥</span>
+                        <div>
+                            <strong id="streakCount">1 day</strong>
+                            <span>current streak</span>
+                        </div>
+                    </div>
+
+                    <div class="progress-message">
+                        <span id="progressCompanionEmoji">🐱</span>
+                        <p id="progressCompanionMessage">"Let's see how today goes."</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="companion-card">
+                <div class="companion-info">
+                    <span class="companion-label">YOUR COMPANION</span>
+                    <h2 id="companionName">Luna 🐱</h2>
+                    <p class="companion-personality" id="companionPersonality">
+                        Your slightly judgmental, occasionally helpful cat.
+                    </p>
+                    <div class="companion-message">
+                        <p id="companionMessage">"You have things to do. I'm just reminding you."</p>
+                    </div>
+                    <div class="companion-actions">
+                        <button class="companion-button" id="checkOnCompanion">
+                            Check on <span id="companionShortName">Luna</span>
+                        </button>
+                        <button class="companion-switch-button" id="switchCompanion">
+                            🔄 Switch companion
+                        </button>
+                    </div>
+                </div>
+                <div class="companion-avatar" id="companionAvatar">🐱</div>
+            </section>
+
+            <section class="quick-add">
+                <div class="quick-add-text">
+                    <span class="quick-add-icon">✨</span>
+                    <div>
+                        <h2>Got something to remember?</h2>
+                        <p>Add a task and your companion will make sure you don't forget it.</p>
+                    </div>
+                </div>
+                <button class="quick-add-button">+ Add Reminder</button>
+            </section>
+        </main>
+    </div>
+
+    <div class="reminder-modal" id="reminderModal">
+        <div class="reminder-form">
+            <h2>Add a Reminder</h2>
+
+            <label for="taskName">Task name</label>
+            <input type="text" id="taskName" placeholder="What do you need to do?">
+            <p class="form-error" id="nameError"></p>
+
+            <label for="taskTime">Time</label>
+            <input type="time" id="taskTime">
+            <p class="form-error" id="timeError"></p>
+
+            <label for="taskCategory">Category</label>
+            <select id="taskCategory">
+                <option value="health">Health</option>
+                <option value="focus">Focus</option>
+                <option value="personal">Personal</option>
+            </select>
+
+            <div class="form-buttons">
+                <button type="button" id="cancelReminder">Cancel</button>
+                <button type="button" id="saveReminder">Add Reminder</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

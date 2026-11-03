@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Survey Form</title>
+  </head>
+  <body>
+<h1 id="title">Cookie Survey Form</h1>
+
+<p id="description">We would like to know what you think of our cookies</p>
+
+<form id="survey-form">
+<label id="name-label" for="name">Name:</label>
+<input type="text" id="name" required placeholder="Tom Ayo"/>
+<br><br>
+<label id="email-label" for="email">Email:</label>
+<input type="email" id="email" required placeholder="abc@gmail.com"/>
+<br><br>
+<label id="number-label" for="number">Number:</label>
+<input type="number" id="number" min="2" max="100" placeholder="1238535"/>
+
+<br><br><br>
+<label for="dropdown">Favourite Flavor</label>
+<select id="dropdown">
+  <option value="chocolate">Chocolate</option>
+  <option value="strawberry">Strawberry</option>
+  <option value="vanilla">Vanilla</option>
+  <option value="coconut">Coconut</option>
+  <option value="Lemon">Lemon</option>
+  </select>
+  <br><br>
+  <p>Which package is your favourite</p>
+  <label>
+    <input type="radio" name="package" value="basic"/>Basic
+    </label>
+    <br>
+    <label>
+    <input type="radio" name="package" value="duo"/>Duo
+    </label>
+    <br>
+    <label>
+    <input type="radio" name="package" value="powerup"/>Powerup
+    </label>
+    <br>
+    <label>
+    <input type="radio" name="package" value="premium"/>Premium
+    </label>
+    <br>
+    <label>
+    <input type="radio" name="package" value="deluxe"/>Deluxe
+    </label>
+    <br><br>
+<p> What kind of cookie do you like(select all that apply)</p>
+<label>
+  <input type="checkbox" name="cookie" value="brownies"/>Brownies
+    </label>
+  <br>
+  <input type="checkbox" name="cookie" value="chocolate chip"/>Chocolate chip
+    </label>
+  <br>
+  <input type="checkbox" name="cookie" value="sugar cookie"/>Sugar cookie
+    </label>
+  <br>
+  <input type="checkbox" name="cookie" value="snowball cookie"/>Snowball cookie
+    </label>
+  <br>
+  <input type="checkbox" name="cookie" value="peanut butter blossoms"/>Peanut butter blossoms
+    </label>
+  <br>
+  <input type="checkbox" name="cookie" value="shortbread"/>Shortbread
+  </label>
+  
+  <br><br>
+  <label for=comments>Additional Comments:</label>
+  <br>
+
+  <textarea id="comments" rows="4" columns="40" placeholder="Anything we might've missed"></textarea>
+  <br>
+  <br>
+  <button id="submit" type="submit">Submit</button>
+  </form>
+ </body>
+</html>

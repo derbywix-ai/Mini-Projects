@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Erdoo Deborah - Portfolio</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Inter:wght@400;500&family=Hanken+Grotesk:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+
+            theme: {
+                extend: {
+
+                    colors: {
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e4e2e1",
+                        "on-background": "#1b1c1c",
+                        "secondary-fixed": "#e9ddff",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#e6deff",
+                        "tertiary-fixed": "#e5e0ef",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed-dim": "#c9c4d3",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f3f0f0",
+                        "primary-container": "#7657fa",
+                        "surface-container-low": "#f6f3f2",
+                        "on-tertiary-fixed": "#1c1a25",
+                        "secondary": "#665495",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#5f3de3",
+                        "on-secondary-fixed-variant": "#4e3c7b",
+                        "tertiary-container": "#767380",
+                        "surface-variant": "#e4e2e1",
+                        "surface-container-high": "#eae8e7",
+                        "background": "#fbf9f8",
+                        "on-primary-fixed": "#1b0062",
+                        "on-surface-variant": "#484555",
+                        "secondary-container": "#cbb6ff",
+                        "primary": "#5c39e0",
+                        "primary-fixed-dim": "#c9beff",
+                        "secondary-fixed-dim": "#d0bcff",
+                        "surface": "#fbf9f8",
+                        "on-primary-fixed-variant": "#4617cb",
+                        "outline": "#797587",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#fffbff",
+                        "outline-variant": "#c9c4d8",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#5d5a67",
+                        "surface-container": "#f0eded",
+                        "on-tertiary-fixed-variant": "#474551",
+                        "on-secondary-fixed": "#210c4d",
+                        "on-surface": "#1b1c1c",
+                        "surface-bright": "#fbf9f8",
+                        "inverse-primary": "#c9beff",
+                        "inverse-surface": "#303030",
+                        "on-secondary-container": "#564484",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-dim": "#dcd9d9"
+                    },
+
+                    borderRadius: {
+                        DEFAULT: "1rem",
+                        lg: "2rem",
+                        xl: "3rem",
+                        full: "9999px"
+                    },
+
+                    fontFamily: {
+                        "label-md": ["Geist"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"]
+                    },
+
+                    fontSize: {
+                        "label-md": [
+                            "14px",
+                            {
+                                lineHeight: "20px",
+                                letterSpacing: "0.02em",
+                                fontWeight: "500"
+                            }
+                        ],
+
+                        "body-md": [
+                            "16px",
+                            {
+                                lineHeight: "24px",
+                                fontWeight: "400"
+                            }
+                        ],
+
+                        "body-lg": [
+                            "18px",
+                            {
+                                lineHeight: "28px",
+                                fontWeight: "400"
+                            }
+                        ],
+
+                        "display": [
+                            "64px",
+                            {
+                                lineHeight: "72px",
+                                letterSpacing: "-0.02em",
+                                fontWeight: "700"
+                            }
+                        ],
+
+                        "headline-md": [
+                            "24px",
+                            {
+                                lineHeight: "32px",
+                                fontWeight: "600"
+                            }
+                        ],
+
+                        "headline-lg": [
+                            "40px",
+                            {
+                                lineHeight: "48px",
+                                letterSpacing: "-0.01em",
+                                fontWeight: "600"
+                            }
+                        ]
+                    }
+                }
+            }
+        };
+    </script>
+
+    <style>
+        body {
+            background-color: #fbf9f8;
+            color: #1b1c1c;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+
+<script src="https://cdn.botpress.cloud/webchat/v3.7/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2026/08/06/10/20260806103911-499PM4KH.js" defer></script>
+</head>
+
+
+<body class="antialiased min-h-screen flex flex-col">
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav class="w-full h-20 bg-background border-b border-dashed border-secondary-container sticky top-0 z-50">
+
+        <div class="flex justify-between items-center max-w-[1200px] mx-auto px-6 h-full">
+
+            <!-- Logo -->
+
+            <a
+                href="portfolio.html"
+                class="font-headline-md text-headline-md text-on-background font-bold tracking-tight hover:text-primary transition-colors"
+            >
+                Erdoo Deborah
+            </a>
+
+
+            <!-- Desktop Navigation -->
+
+            <div class="hidden md:flex space-x-8">
+
+                <a
+                    href="portfolio.html"
+                    class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1"
+                >
+                    Home
+                </a>
+
+                <a
+                    href="myprojects.html"
+                    class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors"
+                >
+                    Projects
+                </a>
+
+                <a
+                    href="contacts.html"
+                    class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors"
+                >
+                    Contact
+                </a>
+
+            </div>
+
+
+            <!-- Mobile Menu Button -->
+
+            <button
+                class="md:hidden text-on-background hover:text-primary transition-colors"
+                aria-label="Open menu"
+            >
+                <span
+                    class="material-symbols-outlined"
+                    style="font-variation-settings: 'FILL' 0;"
+                >
+                    menu
+                </span>
+            </button>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="flex-grow w-full max-w-[1200px] mx-auto px-6 py-16 md:py-24">
+
+
+        <!-- =========================
+             HERO
+        ========================== -->
+
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-32">
+
+
+            <!-- Text -->
+
+            <div class="order-2 lg:order-1">
+
+                <div
+                    class="inline-flex items-center px-4 py-2 rounded-full bg-surface-container-low border border-dashed border-secondary-container mb-6"
+                >
+
+                    <span class="w-2.5 h-2.5 rounded-full bg-primary mr-3"></span>
+
+                    <span class="font-label-md text-label-md text-secondary">
+                        Computer Science Student
+                    </span>
+
+                </div>
+
+
+                <h1
+                    class="font-display text-display text-on-background tracking-tighter mb-6"
+                >
+                    Hi, I'm Erdoo Deborah.
+                </h1>
+
+
+                <h2
+                    class="font-headline-lg text-headline-lg text-primary mb-6"
+                >
+                    Frontend Developer
+                </h2>
+
+
+                <p
+                    class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-6"
+                >
+                    I enjoy building clean, functional and user-friendly
+                    digital experiences with modern web and mobile technologies.
+                </p>
+
+
+                <p
+                    class="font-body-md text-body-md text-on-surface-variant max-w-xl mb-8"
+                >
+                    I'm constantly learning, experimenting with new ideas,
+                    and turning concepts into working projects.
+                </p>
+
+
+                <!-- Buttons -->
+
+                <div class="flex flex-wrap gap-4">
+
+                    <a
+                        href="myprojects.html"
+                        class="inline-flex items-center justify-center h-12 px-7 rounded-xl bg-primary text-on-primary font-label-md text-label-md hover:bg-primary/90 transition-colors"
+                    >
+                        View My Projects
+                    </a>
+
+
+                    <a
+                        href="contacts.html"
+                        class="inline-flex items-center justify-center h-12 px-7 rounded-xl bg-transparent text-primary font-label-md text-label-md border border-dashed border-primary hover:bg-primary/5 transition-colors"
+                    >
+                        Contact Me
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Profile Picture -->
+
+            <div class="order-1 lg:order-2 flex justify-center">
+
+                <div
+                    class="relative w-72 h-72 md:w-96 md:h-96 rounded-full bg-secondary-fixed/30 border border-dashed border-secondary-container flex items-center justify-center"
+                >
+
+                    <div
+                        class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-lg"
+                    >
+
+                        <img
+                            src="profile.jpg"
+                            alt="Erdoo Deborah"
+                            class="w-full h-full object-cover"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             ABOUT ME
+        ========================== -->
+
+        <section class="mb-32">
+
+            <div class="max-w-3xl">
+
+                <p
+                    class="font-label-md text-label-md text-primary mb-3"
+                >
+                    ABOUT ME
+                </p>
+
+
+                <h2
+                    class="font-headline-lg text-headline-lg text-on-background mb-6"
+                >
+                    Building, learning, and growing.
+                </h2>
+
+
+                <p
+                    class="font-body-lg text-body-lg text-on-surface-variant mb-5"
+                >
+                    I'm a Computer Science student who enjoys creating
+                    websites and mobile applications. I started with
+                    HTML and CSS and have continued expanding my skills
+                    into JavaScript, React and React Native.
+                </p>
+
+
+                <p
+                    class="font-body-md text-body-md text-on-surface-variant"
+                >
+                    I'm particularly interested in creating interfaces
+                    that are simple to understand, visually appealing,
+                    and useful to real people.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             SKILLS
+        ========================== -->
+
+        <section class="mb-32">
+
+            <p
+                class="font-label-md text-label-md text-primary mb-3"
+            >
+                SKILLS
+            </p>
+
+
+            <h2
+                class="font-headline-lg text-headline-lg text-on-background mb-8"
+            >
+                Technologies I work with
+            </h2>
+
+
+            <div class="flex flex-wrap gap-3">
+
+                <span class="bg-[#f5f0ff] text-primary font-label-md px-4 py-2 rounded-full border border-primary/20">
+                    HTML5
+                </span>
+
+                <span class="bg-[#f5f0ff] text-primary font-label-md px-4 py-2 rounded-full border border-primary/20">
+                    CSS3
+                </span>
+
+                <span class="bg-[#f5f0ff] text-primary font-label-md px-4 py-2 rounded-full border border-primary/20">
+                    JavaScript
+                </span>
+
+                <span class="bg-[#f5f0ff] text-primary font-label-md px-4 py-2 rounded-full border border-primary/20">
+                    React
+                </span>
+
+                <span class="bg-[#f5f0ff] text-primary font-label-md px-4 py-2 rounded-full border border-primary/20">
+                    React Native
+                </span>
+
+                <span class="bg-[#f5f0ff] text-primary font-label-md px-4 py-2 rounded-full border border-primary/20">
+                    Expo
+                </span>
+
+                <span class="bg-[#f5f0ff] text-primary font-label-md px-4 py-2 rounded-full border border-primary/20">
+                    Node.js
+                </span>
+
+                <span class="bg-[#f5f0ff] text-primary font-label-md px-4 py-2 rounded-full border border-primary/20">
+                    Git
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             FEATURED PROJECT
+        ========================== -->
+
+        <section class="mb-20">
+
+            <div class="flex items-end justify-between mb-8">
+
+                <div>
+
+                    <p
+                        class="font-label-md text-label-md text-primary mb-3"
+                    >
+                        FEATURED WORK
+                    </p>
+
+                    <h2
+                        class="font-headline-lg text-headline-lg text-on-background"
+                    >
+                        What I'm building
+                    </h2>
+
+                </div>
+
+
+                <a
+                    href="myprojects.html"
+                    class="hidden md:inline-flex items-center text-primary font-label-md hover:underline"
+                >
+                    See all projects
+                    <span class="material-symbols-outlined ml-1 text-lg">
+                        arrow_forward
+                    </span>
+                </a>
+
+            </div>
+
+
+
+            <!-- MedTrack -->
+
+            <div
+                class="bg-surface-container-lowest rounded-3xl border border-dashed border-secondary-container p-6 md:p-10"
+            >
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
+
+                    <!-- Project Preview -->
+
+                    <div
+                        class="rounded-2xl bg-secondary-fixed/30 border border-dashed border-secondary-container h-72 flex items-center justify-center"
+                    >
+
+                        <div class="text-center">
+
+                            <span
+                                class="material-symbols-outlined text-primary text-6xl mb-3"
+                            >
+                                medication
+                            </span>
+
+                            <p
+                                class="font-headline-md text-headline-md text-primary"
+                            >
+                                MedTrack
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Project Information -->
+
+                    <div>
+
+                        <div
+                            class="inline-flex items-center px-3 py-1 rounded-full bg-surface-container-low border border-dashed border-secondary-container mb-4"
+                        >
+
+                            <span class="w-2 h-2 rounded-full bg-amber-400 mr-2"></span>
+
+                            <span class="font-label-md text-label-md text-secondary">
+                                In Development
+                            </span>
+
+                        </div>
+
+
+                        <h3
+                            class="font-headline-lg text-headline-lg text-on-background mb-4"
+                        >
+                            MedTrack
+                        </h3>
+
+
+                        <p
+                            class="font-body-md text-body-md text-on-surface-variant mb-6"
+                        >
+                            A medication reminder app built with React Native.
+                            Users can add medications, set reminders, and
+                            keep track of their medicines through a simple
+                            mobile interface.
+                        </p>
+
+
+                        <div class="flex flex-wrap gap-2 mb-6">
+
+                            <span class="bg-[#f5f0ff] text-primary font-label-md text-[12px] px-3 py-1 rounded-full">
+                                React Native
+                            </span>
+
+                            <span class="bg-[#f5f0ff] text-primary font-label-md text-[12px] px-3 py-1 rounded-full">
+                                Expo
+                            </span>
+
+                            <span class="bg-[#f5f0ff] text-primary font-label-md text-[12px] px-3 py-1 rounded-full">
+                                Appwrite
+                            </span>
+
+                            <span class="bg-[#f5f0ff] text-primary font-label-md text-[12px] px-3 py-1 rounded-full">
+                                AsyncStorage
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="myprojects.html"
+                            class="inline-flex items-center text-primary font-label-md hover:underline"
+                        >
+                            View project details
+                            <span class="material-symbols-outlined ml-1 text-lg">
+                                arrow_forward
+                            </span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Mobile Project Link -->
+
+        <div class="md:hidden text-center mb-20">
+
+            <a
+                href="myprojects.html"
+                class="inline-flex items-center text-primary font-label-md hover:underline"
+            >
+                See all projects
+
+                <span class="material-symbols-outlined ml-1 text-lg">
+                    arrow_forward
+                </span>
+
+            </a>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer
+        class="w-full py-16 bg-surface-container-low border-t border-dashed border-secondary-container"
+    >
+
+        <div
+            class="flex flex-col items-center justify-center space-y-4 w-full px-6 text-center max-w-[1200px] mx-auto"
+        >
+
+            <h2
+                class="font-headline-md text-headline-md text-primary"
+            >
+                Erdoo Deborah
+            </h2>
+
+
+            <div class="flex space-x-6 py-4">
+
+                <a
+                    href="contacts.html"
+                    class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors"
+                >
+                    Contact
+                </a>
+
+                <a
+                    href="myprojects.html"
+                    class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors"
+                >
+                    Projects
+                </a>
+
+            </div>
+
+
+            <p
+                class="font-body-md text-body-md text-secondary"
+            >
+                More projects coming soon. © 2026 Erdoo Deborah
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</body>
+</html>
